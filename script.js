@@ -96,11 +96,6 @@ function changeList(position) {
     } else {
         displayList(lists[position])
     }
-
-    
 }
 
-function test() {
-    console.log('test')
-}
 
