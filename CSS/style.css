@@ -16,17 +16,9 @@
 
 .listSearchBox {
   border: 15px;
-  display: block;
-  background-color: red;
+  display: inline;
   width: 100%;
-}
-
-.changeListFunctions {
-  display: flex;
-}
-
-button {
-  text-decoration: none;
+  border-color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */

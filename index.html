@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/f6f7d81665.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -11,54 +12,29 @@
     <div class="outer">
         <nav class="navbar">
             <p class="leftnav">The Ultimate NA List</p> 
-            <p class="rightnav">*gear* *profile*</p>
+            <p class="rightnav"><i class="fa-solid fa-gear"></i><i class="fa-solid fa-user"></i></p>
         </nav>
        
         <div class="container-fluid">
           <div class="row">
             <div class="col-3">
-                <input class="listSearchBox"></input>
+                <input class="listSearchBox" placeholder="enter list name" id="usersearch"></input><p>+</p>
                         <ul class="list-group">
-                            <li class="list-group-item" id="list1">list1</li>
-                            <li class="list-group-item" id="list2">list2</li>
-                            <li class="list-group-item" id="list3">list3</li>
-                            <li class="list-group-item" id="list4">list4</li>
-                            <li class="list-group-item" id="list5">list5</li>
+                            <li class="list-group-item"><button onclick="changeList(0)">changeListToOne</button></li>
+                            <li class="list-group-item"><button onclick="changeList(1)">changeListToTwo</button></li>
+                            <li class="list-group-item"><button onclick="changeList(2)">changeListToThree</button></li>
                           </ul>
                     </div>
                 
                 </ul>
-                <div class="col-8"><!--main area-->
+                <div class="col-8" id="displayList">
 
+                    <div class="listName">
 
-                  <p id="displayList"> </p>
-                  <div class="changeListFunctions">
-                  <button onclick="changeListToOne()">changeListToOne</button>
-                  <button onclick="changeListToTwo()">changeListToTwo</button>
-                  <button onclick="changeListToThree()">changeListToThree</button>
-                  </div>
+                    </div>
+                        <div class="tasks">
 
-
-                    <script>
-                        const lists = {
-                            1: {title:"grocery list", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
-                            2: {title:"grocery list two", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]}
-                        }
-                        
-                        function changeListToOne() {
-                        document.getElementById("displayList").innerHTML = "listOne";
-                        }
-
-                        function changeListToTwo() {
-                        document.getElementById("displayList").innerHTML = "listTwo";
-                        }
-
-                        function changeListToThree() {
-                        document.getElementById("displayList").innerHTML = "listThree";
-                        }
-
-                    </script>
-                
+                    </div>
                 </div>
             </div>
        
