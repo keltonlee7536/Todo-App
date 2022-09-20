@@ -6,19 +6,13 @@
 //removeAllTodosCompleted
 
 
+document.getElementById("displayList").innerHTML = "lists!";
 
 
 
 const lists = {
-    1: {title:"grocery list", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}] },
-
-    2: {
-        title:"grocery list two",
-        tasks:[
-        {name: 'milk', completed:false},
-        {name: 'cheese', completed:false},
-    ]
-}
+    1: {title:"grocery list", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
+    2: {title:"grocery list two", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]}
 }
 
 const currentList = lists[0];
