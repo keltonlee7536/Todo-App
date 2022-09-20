@@ -1,5 +1,7 @@
 .navbar {
   background-color: rgb(79, 79, 79);
+  display: flex;
+  align-items: center;
 }
 
 .leftnav {
@@ -15,6 +17,8 @@
 .listSearchBox {
   border: 15px;
   display: block;
+  background-color: red;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
