@@ -18,9 +18,20 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-3">
-                <input class="listSearchBox" placeholder="enter list name" id="usersearch"></input><p>+</p>
+                <div>
+                    <input class="addList" placeholder="enter new list name" id="addList"></input>
+                    <button class="btn btn-primary" onclick="addList()"></button>
+                </div>
+
+                <div>
+                    <input class="addTask" placeholder="enter new task" id="addTask"></input>
+                    <button class="btn btn-primary" onclick="addTask()"></button>
+                </div>
+
+
+
                         <ul class="list-group">
-                            <li class="list-group-item"><button onclick="changeList(0)">changeListToOne</button></li>
+                            <li class="list-group-item"><button onclick="changeList(0)" id="list1">changeListToOne</button></li>
                             <li class="list-group-item"><button onclick="changeList(1)">changeListToTwo</button></li>
                             <li class="list-group-item"><button onclick="changeList(2)">changeListToThree</button></li>
                           </ul>
