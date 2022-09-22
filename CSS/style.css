@@ -14,11 +14,18 @@
   color: white;
 }
 
-.listSearchBox {
-  border: 15px;
-  display: inline;
+.button {
+  color: red;
   width: 100%;
-  border-color: grey;
+  height: 10%;
+}
+
+input {
+  width: 100%;
+}
+
+.list-group-item {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

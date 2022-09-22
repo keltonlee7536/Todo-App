@@ -11,46 +11,34 @@
 <body>
     <div class="outer">
         <nav class="navbar">
-            <p class="leftnav">The Ultimate NA List</p> 
-            <p class="rightnav"><i class="fa-solid fa-gear"></i><i class="fa-solid fa-user"></i></p>
+            <p style="color:white;">The Ultimate NA List</p> 
         </nav>
        
         <div class="container-fluid">
           <div class="row">
             <div class="col-3">
+
                 <div>
                     <input class="addList" placeholder="enter new list name" id="addList"></input>
-                    <button class="btn btn-primary" onclick="addList()"></button>
+                    <button class="button" onclick="addList()"></button>
                 </div>
-
                 <div>
                     <input class="addTask" placeholder="enter new task" id="addTask"></input>
-                    <button class="btn btn-primary" onclick="addTask()"></button>
+                    <button class="button" onclick="addTask()"></button>
                 </div>
-
-
-
+                
                         <ul class="list-group">
                             <li class="list-group-item"><button onclick="changeList(0)" id="list1">changeListToOne</button></li>
                             <li class="list-group-item"><button onclick="changeList(1)">changeListToTwo</button></li>
                             <li class="list-group-item"><button onclick="changeList(2)">changeListToThree</button></li>
                           </ul>
                     </div>
-                
-                </ul>
+
                 <div class="col-8" id="displayList">
-
-                    <div class="listName">
-
-                    </div>
-                        <div class="tasks">
-
-                    </div>
+                    <div class="listName"></div>
+                        <div class="tasks"></div>
                 </div>
             </div>
-       
-            
-       
           </div>
         </div>
        </div>
