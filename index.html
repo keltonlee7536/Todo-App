@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <script src="https://kit.fontawesome.com/f6f7d81665.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="script.js"></script>
-
 </head>
-<body>
-    <div class="outer">
-        <nav class="navbar">
-            <p style="color:white;">The Ultimate NA List</p> 
-        </nav>
-       
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-3">
+<body onload="test(), displayList()">
+<div class="main">
 
-                <div>
-                    <input class="addList" placeholder="enter new list name" id="addList"></input>
-                    <button class="button" onclick="addList()"></button>
-                </div>
-                <div>
-                    <input class="addTask" placeholder="enter new task" id="addTask"></input>
-                    <button class="button" onclick="addTask()"></button>
-                </div>
-                
-                        <ul class="list-group">
-                            <li class="list-group-item"><button onclick="changeList(0)" id="list1">changeListToOne</button></li>
-                            <li class="list-group-item"><button onclick="changeList(1)">changeListToTwo</button></li>
-                            <li class="list-group-item"><button onclick="changeList(2)">changeListToThree</button></li>
-                          </ul>
-                    </div>
+    <div class="menu">
 
-                <div class="col-8" id="displayList">
-                    <div class="listName"></div>
-                        <div class="tasks"></div>
-                </div>
-            </div>
-          </div>
-        </div>
-       </div>
+            <input placeholder="enter new list name" id="addList"></input>
+            <button onclick="addList()">addList()</button>
+            <input placeholder="enter new task" id="addTask"></input>
+            <button onclick="addTask()">addTask()</button>
+
+            <ul>
+                <li><button onclick="changeList(0)" id="listName">list 1</button></li>
+                <li><button onclick="removelist(0)">Delete1</button></li>
+                <li><button onclick="changeList(1)" id="list1">list 2</button></li>
+                <li><button onclick="changeList(2)" id="list1">list 3</button></li>
+            </ul>
+    </div>
+
+    <div class="center" id="displayList">
+        <div class="listName">ListName</div>
+        <div class="tasks">tasks</div>
+        <div id="list-display">test</div>
+    </div>
+
+
+</div>
 </body>
 </html>
+
+
+
+<!--
+    <ul class="list-group">
+                <li class="list-group-item"><button onclick="changeList(0)" id="listName">list 1</button></li>
+                <li class="list-group-item"><button onclick="removelist(0)">Delete1</button></li>
+                <li class="list-group-item"><button onclick="changeList(1)" id="list1">list 2</button></li>
+                <li class="list-group-item"><button onclick="changeList(2)" id="list1">list 3</button></li>
+            </ul
+            
+                -->

@@ -1,14 +1,43 @@
-function removeList(){
-    //delete the list by position?
-}
-const lists = [ //add a tutorial?
-    {name:"grocery list", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
-    {name:"grocery list two", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]}
+const lists = [
+    {name:"listName", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
+    {name:"listName-2", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]}
 ]
+
+function displayList(){
+    document.getElementById('list-display').innerHTML = lists[0];
+  }
+
+function addList() {
+    const newList = document.getElementById('addList').value;
+    console.log(newList)
+    lists.push(newList);
+    document.getElementById('listName').innerHTML = lists.name;
+    //render();
+}
+function removeList(){
+    if (list.completed === true) {
+    lists.remove();//replaces with undefined
+    console.log(lists)
+    }
+}
+function addTask() {
+    const newTask = document.getElementById('addTask').value;
+    console.log(newTask);
+    if(newTask) {
+    lists.push({
+    name: newTask,
+    completed: false
+    })
+    document.getElementById('displayList').innerHTML = lists;
+    //render();
+    }
+}
 function removeTask(){ //sudo
-    //if(delete)true;
-    //remove from list;
-        //render()
+    /*if (lists.name.tasks.completed = true){
+        delete lists.task
+        console.log(lists)
+        render()
+        */
 }
 function completeTask(){ //sudo
     //if (completed): true;
@@ -40,27 +69,6 @@ function removeAllTasks(){ //sudo
     // print out the todos
     document.getElementById('current-list-todos').innerHTML = todosHtml;
 }
-function addTask() {
-        const newTask = document.getElementById('addTask').value;
-        console.log(newTask);
-        if(newTask) {
-        lists.push({
-        name: newTask,
-        completed: false
-        })
-        document.getElementById('displayList').innerHTML = lists;
-        //render();
-        }
-}
-function addList() {
-    const newList = document.getElementById('addList').value;
-    console.log(newList);
-    if(newList) {
-    lists.push
-    document.getElementById('listName').innerHTML = lists.name;
-    //render();
-    }
-}
 function save() {
 localStorage.setItem('currentList', JSON.stringify(currentList)); 
 localStorage.setItem('lists', JSON.stringify(lists));
@@ -75,6 +83,14 @@ function getTasksHtml(tasks){
     }
     return tasksHtml
 }
+function changeList(position) {
+    if(position >= lists.length) {
+        alert('Error')
+        //make a new list?
+    } else {
+        displayList(lists[position])
+    }
+}
 function displayList(listData){
     let name = listData.name;
     let tasks = listData.tasks;
@@ -85,10 +101,10 @@ function displayList(listData){
     listName.textContent = name
     tasksElement.innerHTML = tasksHtml
 }
-function changeList(position) {
-    if(position >= lists.length) {
-        alert('No list exists')
-    } else {
-        displayList(lists[position])
-    }
-}
+
+function test() {
+    toDoArray = ["function addList","function removeList","function addTask"]
+    //console.log(toDoArray)
+    //console.log(lists)
+    console.log()
+  }
