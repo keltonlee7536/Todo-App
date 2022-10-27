@@ -3,43 +3,39 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="script.js"></script>
 </head>
-<body onload="test(), displayList()">
+<body onload="displayList()">
 <div class="main">
 
     <div class="menu">
 
             <input placeholder="enter new list name" id="addList"></input>
-            <button onclick="addList()">addList()</button>
-            <input placeholder="enter new task" id="addTask"></input>
-            <button onclick="addTask()">addTask()</button>
+            <button onclick="addList()">addList()</button><br><br>
 
             <ul>
                 <li><button onclick="changeList(0)" id="listName">list 1</button></li>
-                <li><button onclick="removelist(0)">Delete1</button></li>
+                <li><button onclick="removeList(0)">Delete</button></li>
+                <input placeholder="enter new task" id="addTask" style="width:98%;"></input>
+                <button onclick="addTask(0)">addTask</button><br><br><br><br>
+
                 <li><button onclick="changeList(1)" id="list1">list 2</button></li>
+                <li><button onclick="removeList(1)">Delete</button></li>
+                <input placeholder="enter new task" id="addTask" style="width:98%;"></input>
+                <button onclick="addTask(0)">addTask</button><br><br><br><br>
+
                 <li><button onclick="changeList(2)" id="list1">list 3</button></li>
+                <li><button onclick="removeList(2)">Delete</button></li>
+                <input placeholder="enter new task" id="addTask" style="width:98%;"></input>
+                <button onclick="addTask(0)">addTask</button><br><br><br><br>
             </ul>
     </div>
 
     <div class="center" id="displayList">
-        <div class="listName">ListName</div>
-        <div class="tasks">tasks</div>
-        <div id="list-display">test</div>
+        <div class="listName"></div>
+        <div class="tasks"></div>
+        <div id="list-display"></div>
     </div>
 
 
 </div>
 </body>
 </html>
-
-
-
-<!--
-    <ul class="list-group">
-                <li class="list-group-item"><button onclick="changeList(0)" id="listName">list 1</button></li>
-                <li class="list-group-item"><button onclick="removelist(0)">Delete1</button></li>
-                <li class="list-group-item"><button onclick="changeList(1)" id="list1">list 2</button></li>
-                <li class="list-group-item"><button onclick="changeList(2)" id="list1">list 3</button></li>
-            </ul
-            
-                -->

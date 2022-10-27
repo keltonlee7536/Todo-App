@@ -1,37 +1,35 @@
-const lists = [
-    {name:"listName", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
-    {name:"listName-2", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]}
-]
-
-function displayList(){
-    document.getElementById('list-display').innerHTML = lists[0];
-  }
-
-function addList() {
-    const newList = document.getElementById('addList').value;
-    console.log(newList)
-    lists.push(newList);
-    document.getElementById('listName').innerHTML = lists.name;
-    //render();
-}
-function removeList(){
-    if (list.completed === true) {
-    lists.remove();//replaces with undefined
-    console.log(lists)
+//Working On
+function removeList(position){//position needs to be a global variable
+    if(position >= lists.length) {
+        console.log(position + ' dosent exist')
+    } else {
+        console.log('removelist ' + position)
+        lists.pop([position]);
     }
 }
-function addTask() {
-    const newTask = document.getElementById('addTask').value;
-    console.log(newTask);
-    if(newTask) {
-    lists.push({
-    name: newTask,
-    completed: false
-    })
-    document.getElementById('displayList').innerHTML = lists;
-    //render();
+function changeList(position) {
+    if(position >= lists.length) {
+        console.log('error')
+    } else {
+        displayList(lists[position])
+        console.log(position)
     }
 }
+function addTask(position) {
+    if(position >= lists.length) {
+        console.log('error')
+    } else {
+        const newTask = document.getElementById('addTask').value;
+        console.log("new task" + newTask);
+        //if(newTask) {
+        lists[position].push({name: newTask, completed: false })
+        console.log(position)
+    }
+}
+
+
+
+// To Do
 function removeTask(){ //sudo
     /*if (lists.name.tasks.completed = true){
         delete lists.task
@@ -39,13 +37,12 @@ function removeTask(){ //sudo
         render()
         */
 }
-function completeTask(){ //sudo
-    //if (completed): true;
-        //strikethrough, move to bottom if list;
-        //render()
-}
-function removeAllTasks(){ //sudo
-    //change completed to true for currentlist
+function completeTask(){// runs on check clicked
+    //if (task == completed): true;
+    //lists.remove();//replaces with undefined
+    //Array.remove[]
+    //lists[task].Delete
+    //render()         
 }
  function render() { //not sure what's going on here
     // this will hold the html that will be displayed in the sidebar
@@ -73,6 +70,18 @@ function save() {
 localStorage.setItem('currentList', JSON.stringify(currentList)); 
 localStorage.setItem('lists', JSON.stringify(lists));
 }
+
+
+
+// done
+function addList() {
+    const newList = document.getElementById('addList').value;
+    console.log(newList)
+    lists.push({named: newList, tasks:[{name: '', completed:false}]});
+    document.getElementById('listName').innerHTML = lists.name;
+    console.log(lists)
+    //render();
+}
 function getTasksHtml(tasks){
     let tasksHtml = "";
     for (let taskItem of tasks) {
@@ -83,28 +92,18 @@ function getTasksHtml(tasks){
     }
     return tasksHtml
 }
-function changeList(position) {
-    if(position >= lists.length) {
-        alert('Error')
-        //make a new list?
-    } else {
-        displayList(lists[position])
-    }
-}
-function displayList(listData){
-    let name = listData.name;
-    let tasks = listData.tasks;
+function displayList(lists){
+    let name = lists.named;
+    let tasks = lists.tasks;
     let tasksHtml = getTasksHtml(tasks);
     let listName = document.querySelector('.listName')
     let tasksElement = document.querySelector(".tasks")
 
     listName.textContent = name
-    tasksElement.innerHTML = tasksHtml
+    tasksElement.innerHTML = tasksHtml 
 }
-
-function test() {
-    toDoArray = ["function addList","function removeList","function addTask"]
-    //console.log(toDoArray)
-    //console.log(lists)
-    console.log()
-  }
+const lists = [
+    {named:"list1", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
+    {named:"list2", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]},
+    {named:"list3", tasks:[ {name: 'tacos', completed:false}, {name: 'list3', completed:false}]}
+]
