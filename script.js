@@ -1,48 +1,25 @@
 //Working On
-function removeList(position){//position needs to be a global variable
-    if(position >= lists.length) {
-        console.log(position + ' dosent exist')
-    } else {
-        console.log('removelist ' + position)
-        lists.pop([position]);
-    }
-}
-function changeList(position) {
-    if(position >= lists.length) {
-        console.log('error')
-    } else {
-        displayList(lists[position])
-        console.log(position)
-    }
-}
 function addTask(position) {
     if(position >= lists.length) {
         console.log('error')
     } else {
         const newTask = document.getElementById('addTask').value;
-        console.log("new task" + newTask);
-        //if(newTask) {
-        lists[position].push({name: newTask, completed: false })
         console.log(position)
+        console.log("new task " + newTask);
+        //lists > ("list" + position) > tasks.push[{name: newTask, completed: false}]
+        lists.splice(tasks, newTask, {name: newTask, completed: false});
+        console.log(lists)
     }
 }
 
 
-
 // To Do
-function removeTask(){ //sudo
-    /*if (lists.name.tasks.completed = true){
-        delete lists.task
-        console.log(lists)
-        render()
-        */
-}
 function completeTask(){// runs on check clicked
-    //if (task == completed): true;
+    //if (completed == true) {
     //lists.remove();//replaces with undefined
     //Array.remove[]
     //lists[task].Delete
-    //render()         
+    //render()    
 }
  function render() { //not sure what's going on here
     // this will hold the html that will be displayed in the sidebar
@@ -74,6 +51,22 @@ localStorage.setItem('lists', JSON.stringify(lists));
 
 
 // done
+function changeList(position) {
+    if(position >= lists.length) {
+        console.log('error')
+    } else {
+        displayList(lists[position])
+        console.log(position)
+    }
+}
+function removeList(position){
+    if(position >= lists.length) {
+        console.log(position + ' dosent exist')
+    } else {
+        console.log('removelist ' + position)
+        lists.pop([position]);
+    }
+}
 function addList() {
     const newList = document.getElementById('addList').value;
     console.log(newList)
@@ -103,7 +96,6 @@ function displayList(lists){
     tasksElement.innerHTML = tasksHtml 
 }
 const lists = [
-    {named:"list1", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
-    {named:"list2", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]},
-    {named:"list3", tasks:[ {name: 'tacos', completed:false}, {name: 'list3', completed:false}]}
+    {named:"list0", tasks:[{name: 'apples', completed:false}, {name: 'bananas', completed:false}]},
+    {named:"list1", tasks:[ {name: 'milk', completed:false}, {name: 'cheese', completed:false}]},
 ]
