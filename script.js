@@ -1,4 +1,4 @@
-//Working On
+//Working On -------------------------------------------------------------
 function addTask(position) {
     if(position >= lists.length) {
         console.log('error')
@@ -13,7 +13,7 @@ function addTask(position) {
 }
 
 
-// To Do
+// To Do -----------------------------------------------------------------
 function completeTask(){// runs on check clicked
     //if (completed == true) {
     //lists.remove();//replaces with undefined
@@ -50,7 +50,7 @@ localStorage.setItem('lists', JSON.stringify(lists));
 
 
 
-// done
+// done -------------------------------------------------------------
 function changeList(position) {
     if(position >= lists.length) {
         console.log('error')
