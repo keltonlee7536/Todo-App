@@ -1,4 +1,32 @@
 //Working On -------------------------------------------------------------
+
+function menu(){
+    console.log("menu")
+}
+
+
+
+
+
+function render() { //not sure what's going on here
+    // this will hold the html that will be displayed in the sidebar
+    console.log("render")
+     let listsHtml = '<ul class="list-group">';
+     // iterate through the lists to get their names
+     lists.forEach((list) => {
+    listsHtml += `<li class="list-group-item">${list.name}</li>`;
+    });
+
+
+
+
+
+
+
+function strikethrough(id){
+    document.getElementById(id).setAttribute('style','text-decoration:line-through;')
+}
+
 function addTask(position) {
     if(position >= lists.length) {
         console.log('error')
@@ -21,13 +49,6 @@ function completeTask(){// runs on check clicked
     //lists[task].Delete
     //render()    
 }
- function render() { //not sure what's going on here
-    // this will hold the html that will be displayed in the sidebar
-     let listsHtml = '<ul class="list-group">';
-     // iterate through the lists to get their names
-     lists.forEach((list) => {
-    listsHtml += `<li class="list-group-item">${list.name}</li>`;
-    });
    
     listsHtml += '</ul>';
     // print out the lists
