@@ -4,24 +4,12 @@ function menu(){
     console.log("menu")
 }
 
-
-
-
-
-function render() { //not sure what's going on here
-    // this will hold the html that will be displayed in the sidebar
+function render() {
     console.log("render")
      let listsHtml = '<ul class="list-group">';
-     // iterate through the lists to get their names
      lists.forEach((list) => {
     listsHtml += `<li class="list-group-item">${list.name}</li>`;
     });
-
-
-
-
-
-
 
 function strikethrough(id){
     document.getElementById(id).setAttribute('style','text-decoration:line-through;')

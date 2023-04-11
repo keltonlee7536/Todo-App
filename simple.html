@@ -7,18 +7,34 @@
 <body onload="render()">
 
   <div id="notecard">
+    <div id="notecard-surface">
 
     <!--NOTE TITLE-->
     <div class="listName" id="mydivheader">placeholder title</div>
 
-    <!--NOTECARD TO-DO'S-->
-    <div class="center" id="displayList"></div>
+      <!--NOTECARD TO-DO'S-->
+      <div class="center" id="displayList"></div>
 
+          <div class="menu">
+        
+            <ul class="list-group">
+              <button id='1' onclick="strikethrough(1)">complete</button>
+              <li><button onclick="removeList(0)">Delete</button></li>
+        
+              <input id="newTaskInput" placeholder="add a task">
+              <button onclick="addTask(0)">addTask</button>
+
+            </div>
+      </div>
   </div>
+
 
 
   <!--MENU-->
   <div class="menu" style="float:right;">
+  
+    <input placeholder="enter new list name" id="addList"></input>
+    <button onclick="addList()">addList()</button>
 
     <!--ADD TASK-->
     <input id="newTaskInput" placeholder="add a task">
@@ -30,9 +46,9 @@
 
 
 
-<!--
 
-<div class="menu">
+
+<!-- <div class="menu">
 
   <input placeholder="enter new list name" id="addList"></input>
    <button onclick="addList()">addList()</button>
@@ -48,9 +64,9 @@
   </ul>
 
 
-</div>
+</div> -->
 
--->
+
 
 
 

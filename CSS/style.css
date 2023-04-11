@@ -74,4 +74,9 @@ button {
   color: #fff;
 }
 
+.notecard-surface {
+  color: red;
+  z-index: 15;
+}
+
 /*# sourceMappingURL=style.css.map */
